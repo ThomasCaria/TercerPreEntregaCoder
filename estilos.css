@@ -1,0 +1,418 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    color: #fff;
+}
+
+img {
+    width: 100%;
+    object-fit: contain;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.3rem;
+}
+
+a {
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: #9BBBFC;
+}
+
+
+/* MENSAJE DE BIENVENIDA */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #9BBBFC;
+}
+
+.modalContent {
+    margin: 5% auto;
+    background-color: #4741A6;
+    width: 50%;
+    padding: 50px;
+    border: 1px solid #9BBBFC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.modalContent h3 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.modalContent span {
+    color: #F9CE69;
+    font-weight: 700;
+}
+
+.modalContent form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.modalContent input {
+    height: 32px;
+    border-radius: 5px;
+    width: 350px;
+    padding-left: 8px;
+    margin-bottom: 5px;
+}
+
+.modalContent .submit {
+    background-color: #F9CE69;
+    height: 32px;
+    border-radius: 5px;
+    width: 150px;
+    cursor: pointer;
+    font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    border: none;
+}
+
+
+/* HEADER */
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #4741A6;
+    width: 100%;
+    height: 70px;
+    padding: 0 4%;
+    position: fixed;
+    z-index: 1;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo h1 {
+    font-family: 'Kalam', cursive;
+    font-weight: 700;
+    font-size: 4.5rem;
+}
+
+.logo span {
+    color: #F9CE69;
+}
+
+.logo img {
+    width: 60px;
+    padding-left: 8px;
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.searchBar label {
+    font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+.searchBar input {
+    height: 28px;
+    width: 250px;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.userInfo span {
+    color: #F9CE69;
+}
+
+.userInfo h2 {
+    font-size: 2rem;
+}
+
+.banner img {
+    object-fit: cover;
+    height: 450px;
+}
+
+.carrito {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: #F9CE69;
+}
+
+.carrito img {
+    width: 35px;
+    cursor: pointer;
+}
+
+.carrito p {
+    padding: 5px;
+    background-color: #9BBBFC;
+    color: red;
+    border-radius: 50%;
+}
+
+
+/*SECTIONS*/
+
+section h3 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    padding-left: 15px;
+}
+
+section h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-bottom: 10px;
+    color: #F9CE69;
+}
+
+section p {
+    line-height: 1.4;
+}
+
+.container {
+    padding: 30px 0;
+}
+
+.row {
+    width: 95%;
+    margin: 0 auto;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+#todasCards,
+#favoritasCards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 270px;
+    background-color: #4741A6;
+    overflow-x: hidden;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform .2s ease-in;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.cardInfo {
+    display: flex;
+}
+
+.cardText {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.cardActions {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 10px;
+}
+
+.cardActions a {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    color: #F9CE69;
+    line-height: 1.2;
+}
+
+.cardActions a img {
+    width: 45px;
+    background-color: #4741A6;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+
+/* MODAL DE INFORMACIÓN DE PELICULA */
+
+.modalInfo {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modalInfoContent {
+    margin: 15% auto;
+    background-color: #9bbbfce5;
+    border: 5px solid #4741A6;
+    width: 70%;
+    padding: 30px;
+    display: flex;
+    overflow: hidden;
+}
+
+.modalInfoContent img {
+    width: 100%;
+    padding-right: 30px;
+}
+
+.modalInfoContent h3 {
+    font-size: 2.5rem;
+    color: #F9CE69;
+    margin-bottom: 20px;
+}
+
+.modalInfoContent p {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+.modalInfoActions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 10px;
+}
+
+.botonModal {
+    margin-right: 5px;
+    padding: 1rem 2rem;
+    background-color: #F9CE69;
+    color: #4741A6;
+    border: 1px solid #4741A6;
+    cursor: pointer;
+}
+
+
+/*MODAL DEL CARRITO*/
+
+#modalCart {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow-y: scroll;
+}
+
+.modalCarritoContent {
+    margin: 5% auto;
+    background-color: #9bbbfce5;
+    border: 5px solid #4741A6;
+    width: 30%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modalCarritoContent h3 {
+    font-size: 3rem;
+    color: #F9CE69;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.descripcionPelicula {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.modalCarritoContent img {
+    width: 23%;
+    padding-right: 20px;
+}
+
+.modalCarritoContent p {
+    font-size: 2rem;
+    padding-right: 30px;
+}
+
+.modalCarritoContent button {
+    padding: 10px;
+    background-color: #F9CE69;
+    border-color: #4741A6;
+    cursor: pointer;
+}
+
+.montoTotal {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.montoTotal h4 {
+    font-size: 2.5rem;
+    color: #F9CE69;
+}
+
+.accionesCarrito {
+    display: flex;
+    justify-content: space-around;
+}
+
+.toastifyNotification {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    border-radius: 10px;
+}
+
+.swal2-popup {
+    font-size: 1.5rem !important;
+    font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+}

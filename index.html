@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinefy - El cine en tu casa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="./estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="headerContainer">
+            <div class="logo">
+                <h1><span>S</span>VFLUX</h1>
+                <img src="./img/ticket-logo.png" alt="cinefy">
+            </div>
+            <div class="searchBar">
+                <form id="searchForm">
+                    <label for="">Buscar</label>
+                    <input type="text" id="search">
+                </form>
+
+            </div>
+            <div id="userName" class="userInfo"></div>
+            <div class="carrito">
+                <h2>Ver carrito</h2>
+                <img src="./img/cart-icon.png" alt="carrito" id="botonCarrito">
+                <div id="carrito"></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="banner">
+        <img src="./img/banner.jpg" alt="cinefy">
+    </div>
+
+    <div class="container">
+        <section class="row favoritas">
+            <h3 id="favTitulo">Tus favoritas</h3>
+            <div id="favoritasCards"></div>
+        </section>
+        <section class="row catalogo">
+            <h3 id="bodyTitle">Catálogo</h3>
+            <div id="todasCards"></div>
+        </section>
+    </div>
+
+    <div id="bienvenida" class="modal">
+        <div class="modalContent">
+            <img src="./img/banner.jpg" alt="banner">
+            <h3>Bienvenido a <span>SVFLUX</span></h3>
+            <h3>Ingrese su usuario</h3>
+            <form id="ingresoUsuario">
+                <input id="nombreUsuario" type="text" placeholder="Nombre de usuario">
+                <input type="email" id="emailUsuario" placeholder="Ingrese su email">
+                <input type="submit" value="Aceptar" class="submit"></input>
+            </form>
+        </div>
+    </div>
+
+    <div id="modalInfoPelicula" class="modalInfo"></div>
+
+    <div id="modalCart">
+        <div class="modalCarritoContent">
+            <h3>Carrito</h3>
+            <div id="modalCarrito"></div>
+        </div>
+    </div>
+
+
+
+
+    <script src="./app.js"></script>
+
+</body>
+
+</html>
